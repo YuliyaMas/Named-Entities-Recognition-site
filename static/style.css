@@ -1,0 +1,201 @@
+/*Header*/
+h2 {
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin: 30px 0 60px;
+
+}
+
+.cover-header {
+    position: relative;
+    background-image: linear-gradient(180deg, #EFBD03, #0f9d58, transparent 50%), url("../images/NamedEntityRecognition.png");
+    background-size: cover;
+    /* haut | droit | bas | gauche */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+#titre {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+#logo {
+    transition: transform 0.3s;
+    width: 100px;
+    height: 100px;
+    box-shadow: 4px 4px 6px grey;
+    /*opacity: 0.9;*/
+    /*margin-bottom: 20px;*/
+    border-radius: 50%;
+
+}
+
+#logo:hover {
+	transform: scale(1.7); /* Lors du survole avec la souris augmente la taille de 50% */
+}
+
+/*Partie du site comportant le contenu*/
+
+#main {
+    padding: 10px 50ch 0px 30ch;
+    display: table-row;
+    grid-area: main;
+	overflow: auto;
+    height: 70vh;
+    width: 100%;
+}
+
+#links {
+    display: block;
+    text-align: center;
+}
+
+#user {
+	text-align: center;
+}
+
+
+#account, #description {
+    display: inline;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#menu {
+    list-style-type: none;
+}
+
+.menu-text, h3 {
+    font-family: Regular, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#menu li a, #menu li a:visited {
+    display: block;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #0F192A;
+    border-bottom: 1px solid;
+}
+
+#menu li a:hover {
+    background-color: #0f9d58;
+    color: saddlebrown;
+}
+
+.header {
+    grid-area: head;
+}
+
+nav {
+    grid-area: nav
+}
+
+/*Formulaires sur la page ren(pour insérsion de textes via fichier ou via champs de texte) */
+.form-label {
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid black;
+    background-color: #ffffff;
+}
+
+.form-control:active, .form-control:focus {
+    border: 2px solid #0f9d58;
+    background-color: #ffffff;
+}
+
+/* Formats des fichiers acceptés */
+#formats {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+
+/* Pied du site */
+
+.footer-container {
+    bottom: 0;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    height: 2vh;
+    background-color: #EFBD03;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Logo et titre du pied du site */
+.footer h2 {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 2vw;
+}
+
+#footer-logo {
+    border-radius: 50%;
+}
+
+/* Link vers la page Accueil */
+.footer-links {
+    display: flex;
+}
+
+
+.footer-links a, #credits > a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* Les liens lorsqu'ils sont actifs ou alors qu'on les survole */
+.footer-links a:hover, .footer-links a.active > a {
+    color: #0f9d58 !important;
+}
+
+/* Ctédits (noms des auteurs + lien (@) vers les crédits des images utilisées sur le site */
+#credits {
+    font-family: "Roboto", sans-serif;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+
+}
+
+/*Partie du site comportant le menu et le contenu. Source : livre Premiers pas en CSS3 et HTML5 (Francic Draillard)*/
+.global {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "head head" "nav main" "footer footer";
+}
+
+
